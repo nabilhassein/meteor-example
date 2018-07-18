@@ -1,0 +1,22 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>TODOs</h1>
+      <form class="new-task">
+          <input type="text" class="task" placeholder="task" />
+          <input type="text" class="deadline" placeholder="deadline" />
+          <button type="submit">Add Task</button>
+      </form>
+    </header>
+ 
+    <ul>
+      {{#each todos}}
+        {{> todo}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="todo">
+  <li>{{task}} by {{deadline}}</li>
+</template>
